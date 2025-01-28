@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header> 
+        <div class="container">
+            <nav class="pt-4 navbar navbar-expand-md">
+                <div class="logo me-md-5">
+                    <h1 class="text-success fw-bold"><a href="index.html">Isign</a></h1>
+                </div>
+                <div class="links collapse navbar-collapse navbarLinks ms-md-5">
+                    <a href="lecturer-dashboard.html" class="fw-bold">Dashboard</a>
+                </div>
+                <div class="links collapse navbar-collapse navbarLinks">
+                    <a href="view-history.html" class="fw-bold">History</a>
+                </div>
+                <div class="links">
+                    <button class="btn border-0"><img src="img/Vector.svg" alt="" class="text-dark img-fluid"></button>
+                </div>
+                <button class="navbar-toggler border border-dark" type="button" data-bs-toggle="collapse" data-bs-target=".navbarLinks" aria-controls="navbarLinks" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"><img src="img/list.svg" alt="" class="border-0 fs-1"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <section class="bigGreenButton container mt-5">
+        <p class="fw-semibold greeting">Hi, User</p>
+        <div class="d-grid gap-2 col-12 mx-auto">
+            <button type="submit" class="btn btn-success border rounded p-md-5 p-3 fw-bolder" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <img src="img/Vector.png" alt="" class="img-fluid w-auto"> Initiate Attendance
+            </button>
+        </div>
+    </section>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border rounded-5 p-0 p-md-2 text-center">
+        <div class="modal-header border-0">
+          <h1 class="modal-title fw-bolder text-success text-center formHead" id="exampleModalLabel">Initiate Attendance</h1>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+            <form id="initiateAttendanceForm">
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                    <input type="text" id="courseTitle" name="courseTitle" class="form-control form-control-lg border rounded-pill border-success" placeholder="Course Title" required />
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-10 mx-auto">
+                    <input type="text" id="failsafeCode" name="failsafeCode" class="form-control form-control-lg border rounded-pill border-success" placeholder="Enter Failsafe Code" required />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10 mx-auto">
+                    <input type="number" id="duration" name="duration" class="form-control form-control-lg border rounded-pill border-success" placeholder="Duration in minutes" required />
+                    </div>
+                </div>
+                <div class="row my-4">
+                    <div class="col-10 mx-auto">
+                        <select class="form-select form-control form-control-lg border rounded-pill border-success" id="location" required>
+                            <option value="" disabled selected>Select location</option>
+                            <!-- Options will be dynamically populated -->
+                        </select>
+                    </div>
+                </div>
+               <div class="d-grid gap-2 mb-4 col-10 mx-auto">
+                <button type="submit" class="btn btn-success border rounded-pill py-3">Generate Attendance Code</button>
+               </div>
+            </form>
+            <!-- Alert Response -->
+            <div id="responseAlert" class="alert mt-4 d-none" role="alert">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </div>
+        <div class="modal-footer border-0">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button> -->
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Modal ends -->
+
+
+
+<!-- Attendance List -->
+ <section class="attendanceList container mt-4">
+    <h2 class="text-success fw-bold">My Attendance</h2>
+    <ul id="sessionsList" class="mt-2 list-group list-group-flush">
+        <!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+            <div class="desc">
+               <a href="">
+                <h4>IFT505 WK21</h4>
+               </a>
+                <p class="fs-6">Failsafe Code</p>
+            </div>
+            <button class="border-0">
+                <img src="img/material-symbols_download.png" alt="" class="img-fluid">
+            </button>
+        </li> -->
+    </ul>
+
+ </section>
+  
+    
+
+    <script src="js/initiate-attendance.js"></script>
+    <script src="js/lecturer-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

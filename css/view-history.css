@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+ }
+
+ nav .logo h1 {
+    font-size: 3.4rem;
+}
+
+nav .logo h1 a {
+    text-decoration: none;
+    color: #029932;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #029932;
+}
+
+#historyList .desc a {
+    text-decoration: none;
+    color: black;
+}
+
+#historyList button {
+    background: none;
+}

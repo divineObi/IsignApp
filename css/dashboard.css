@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+ }
+
+ nav .logo h1 {
+    font-size: 3.4rem;
+}
+
+nav .logo h1 a {
+    text-decoration: none;
+    color: #029932;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a:hover {
+    text-decoration: underline;
+    color: #029932;
+}
+
+.modal-header {
+    margin: 0 auto !important;
+}
+
+.bigGreenButton p {
+    font-size: 2rem;
+}
+
+.bigGreenButton button {
+    font-size: 2.4rem;
+}
+
+.modal-header h1 {
+    font-size: 2.5rem;
+}
+
+.attendanceList h2 {
+    font-size: 2.4rem;
+}
+
+#sessionsList .desc a {
+    text-decoration: none;
+    color: black;
+}
+
+#sessionsList button {
+    background: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .bigGreenButton p {
+        font-size: 1.25rem;
+    }
+
+    .bigGreenButton button {
+        font-size: 1.25rem;
+    }
+
+    .modal-header h1 {
+        font-size: 1.45rem;
+    }
+
+    .attendanceList h2 {
+        font-size: 1.25rem;
+    }
+    
+}

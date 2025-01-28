@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+ }
+
+nav .logo h1, .login h1 {
+    font-size: 5rem;
+}
+
+header {
+    background-image: url("../img/Transform\ Attendance\ Accountability\ Harness\ The\ Power\ Of\ Geofencing\ With\ Task\ Tracker.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 65vh;
+}
+
+nav .logo h1 a {
+    text-decoration: none;
+    color: #029932;
+}
+
+.login {
+    min-width: 500px;
+}
+
+.img-illustration {
+    background-color:#029932;
+    background-image: url("../img/Free\ Vector\ _\ Appointment\ booking\ with\ smartphone\ 1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    height: 70vh;
+}
+
+@media only screen and (max-width: 600px) {
+    header {
+        background-image: none;
+        height: 30vh;
+    }
+
+    .flexdiv .login {
+        border: none !important;
+        margin-top: 200px;
+    }
+}
